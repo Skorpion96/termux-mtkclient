@@ -22,7 +22,7 @@ release the buttons.
 
 ## Installation
 
-pkg install wget -y && wget https://raw.githubusercontent.com/Skorpion96/termux-mtkclient/refs/heads/main/install.sh && chmod +x install.sh && ./install.sh
+curl -O https://raw.githubusercontent.com/Skorpion96/termux-mtkclient/refs/heads/main/install.sh && chmod +x install.sh && ./install.sh && rm -rf ~/install.sh
 
 ## Usage
 
