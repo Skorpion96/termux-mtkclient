@@ -3,8 +3,14 @@ export DEBIAN_FRONTEND=nointeractive
 pkg update && pkg upgrade -y -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-confdef"
 apt install libusb termux-api 
 pkg install python2 python3 python-pip -y
-pkg install git -y
-pkg install wget -y
+if ! command -v git &> /dev/null; then
+        pkg install git -y
+        exit 1
+fi
+if ! command -v wget &> /dev/null; then
+        pkg install git -y
+        exit 1
+fi
 git clone https://github.com/vaginessa/termux-mtkclient
 mv ~/termux-mtkclient ~/.termux-mtkclient
 cd ~/.termux-mtkclient
