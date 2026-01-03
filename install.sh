@@ -5,11 +5,9 @@ apt install libusb termux-api
 pkg install python2 python3 python-pip -y
 if ! command -v git &> /dev/null; then
         pkg install git -y
-        exit 1
 fi
 if ! command -v wget &> /dev/null; then
         pkg install wget -y
-        exit 1
 fi
 git clone https://github.com/vaginessa/termux-mtkclient
 mv ~/termux-mtkclient ~/.termux-mtkclient
