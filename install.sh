@@ -8,7 +8,7 @@ if ! command -v git &> /dev/null; then
         exit 1
 fi
 if ! command -v wget &> /dev/null; then
-        pkg install git -y
+        pkg install wget -y
         exit 1
 fi
 git clone https://github.com/vaginessa/termux-mtkclient
