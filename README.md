@@ -22,22 +22,11 @@ release the buttons.
 
 ## Installation
 
-#### Install python >=3.8, git and other deps
-```
-apt install python3 git libusb-1.0 python3-pip
-```
-
-#### Grab files 
-```
-git clone https://github.com/RohitVerma882/termux-mtkclient
-cd mtkclient
-pip3 install -r requirements.txt
-pip3 install .
-```
-
-
+pkg install wget -y && wget https://raw.githubusercontent.com/Skorpion96/termux-mtkclient/refs/heads/main/install.sh && chmod +x install.sh && ./install.sh
 
 ## Usage
+
+if you want life easier for most common stuff run the menu typing mtkclient, else go ahead
 
 ### Run multiple commands
 ```bash
@@ -47,7 +36,7 @@ See the file "[run.example](https://github.com/RohitVerma882/termux-mtkclient/bl
 
 ### Root the phone (Tested with android 9 - 12)
 
-1. Dump boot and vbmeta
+1. Dump boot and vbmeta (you can do this from the root menu)
 ```
 python mtk r boot,vbmeta boot.img,vbmeta.img
 ```
@@ -82,7 +71,7 @@ mv [displayed magisk patched boot filename here] boot.patched
 
 7. Do the steps needed in section "Unlock bootloader below"
 
-8. Flash magisk-patched boot and empty vbmeta
+8. Flash magisk-patched boot and empty vbmeta (you can do this from the root menu)
 ```
 python mtk w boot,vbmeta boot.patched,vbmeta.img.empty
 ```
@@ -120,11 +109,11 @@ python mtk e metadata,userdata,md_udc
 
 2. Unlock bootloader:
 ```
-python mtk da seccfg unlock
+python mtk da seccfg unlock (you can do this from the root menu)
 ```
 for relocking use:
 ```
-python mtk da seccfg lock
+python mtk da seccfg lock (you can do this from the root menu), etcetera, no more need to add this
 ```
 
 3. Reboot the phone:
